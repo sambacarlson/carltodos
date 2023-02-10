@@ -4,4 +4,5 @@ export const UI_CONTROLS = {
   addNewTask: false,
   updateTask: false,
   currentlySelected: false,
+  taskDone:false,
 }

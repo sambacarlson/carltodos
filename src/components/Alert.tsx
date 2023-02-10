@@ -1,8 +1,11 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { showAlert } from '../1slices/uiControlSlice'
 
 
 export default function Alert(props:any) {
   const [choose, setChoose] = React.useState(false)
+  const dispatch = useDispatch()
   const handleChoose = () => setChoose(prevState => !prevState)
   const isNewtask = props.isNewTask
   return (
@@ -44,8 +47,8 @@ export default function Alert(props:any) {
         <textarea placeholder="start typing ..." className=" resize-none w-full h-full outline-none p-2 ring-1 ring-[#f0f0f0]" />
       </div>
       <div className="flex flex-row items-center justify-end space-x-2">
-        <div className="ring-1 ring-gray hover:text-secondary rounded-xl text-center w-20 py-1">Cancel</div>
-        <div className="ring-1 ring-secondary hover:text-secondary rounded-xl text-center w-20 py-1">{isNewtask ? "Add" : "Done"}</div>
+        <div onClick={()=>{dispatch(showAlert(false))}} className="ring-1 ring-gray hover:text-secondary rounded-xl text-center w-20 py-1">Cancel</div>
+        <div onClick={()=>{dispatch(showAlert(false))}} className="ring-1 ring-secondary hover:text-secondary rounded-xl text-center w-20 py-1">{isNewtask ? "Add" : "Done"}</div>
       </div>
     </div>
   )
