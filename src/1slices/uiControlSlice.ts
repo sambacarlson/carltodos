@@ -14,8 +14,8 @@ const uiControlSlice = createSlice({
     addNewTask:(state, action)=>{
       state.addNewTask = action.payload
     },
-    updateTask:(state, action)=>{
-      state.updateTask = action.payload
+    showUpdateAlert:(state, action)=>{
+      state.showUpdateAlert = action.payload
     },
     currentlySelected:(state, action)=>{
       state.currentlySelected = action.payload
@@ -27,4 +27,4 @@ const uiControlSlice = createSlice({
 })
 
 export default uiControlSlice.reducer
-export const {showAlert, addNewTask, updateTask, currentlySelected, taskDone} = uiControlSlice.actions
+export const {showAlert, addNewTask, showUpdateAlert, currentlySelected, taskDone} = uiControlSlice.actions

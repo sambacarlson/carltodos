@@ -2,7 +2,7 @@
 export const UI_CONTROLS = {
   showAlert: false,
   addNewTask: false,
-  updateTask: false,
+  showUpdateAlert: false,
   currentlySelected: false,
   taskDone:false,
 }
